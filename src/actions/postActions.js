@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+const server="https://devconnector-2zy0.onrender.com";
 import {
   ADD_POST,
   GET_ERRORS,
@@ -14,7 +14,7 @@ import {
 export const addPost = postData => dispatch => {
   dispatch(clearErrors());
   axios
-    .post('/api/posts', postData)
+    .post(`${server}/api/posts`, postData)
     .then(res =>
       dispatch({
         type: ADD_POST,
@@ -33,7 +33,7 @@ export const addPost = postData => dispatch => {
 export const getPosts = () => dispatch => {
   dispatch(setPostLoading());
   axios
-    .get('/api/posts')
+    .get(`${server}/api/posts`)
     .then(res =>
       dispatch({
         type: GET_POSTS,

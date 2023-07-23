@@ -1,5 +1,5 @@
 import axios from 'axios';
-const server="https://devconnector-2zy0.onrender.com";
+
 import {
   ADD_POST,
   GET_ERRORS,
@@ -11,6 +11,7 @@ import {
 } from './types';
 
 // Add Post
+const server="https://devconnector-2zy0.onrender.com";
 export const addPost = postData => dispatch => {
   dispatch(clearErrors());
   axios

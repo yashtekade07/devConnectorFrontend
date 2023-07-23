@@ -9,6 +9,7 @@ import {
   SET_CURRENT_USER
 } from './types';
 
+const server="https://devconnector-2zy0.onrender.com";
 // Get current profile
 export const getCurrentProfile = () => dispatch => {
   dispatch(setProfileLoading());
@@ -46,7 +47,7 @@ export const getProfileByHandle = handle => dispatch => {
       })
     );
 };
-const server="https://devconnector-2zy0.onrender.com";
+
 // Create Profile
 export const createProfile = (profileData, history) => dispatch => {
   axios
